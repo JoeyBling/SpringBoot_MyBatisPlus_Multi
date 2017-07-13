@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>wstro-utils</groupId>
+	<artifactId>wstro-utils</artifactId>
+	<name>wstro-utils</name>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>wstro-parent</groupId>
+		<artifactId>wstro-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>wstro-entity</groupId>
+			<artifactId>wstro-entity</artifactId>
+			<version>${wstro-base.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>eu.bitwalker</groupId>
+			<artifactId>UserAgentUtils</artifactId>
+			<version>1.20</version>
+		</dependency>
+	</dependencies>
+
+	<!-- 编译版本 -->
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${maven-compiler.source}</source>
+					<target>${maven-compiler.target}</target>
+					<encoding>${maven.compiler.encoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>wstro-utils</finalName>
+	</build>
+</project>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>wstro-core</groupId>
+		<artifactId>wstro-core</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>wstro-controller</groupId>
+	<artifactId>wstro-controller</artifactId>
+	<name>wstro-controller</name>
+	<packaging>jar</packaging>
+
+	<properties>
+		<kaptcha.version>0.0.9</kaptcha.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>wstro-config</groupId>
+			<artifactId>wstro-config</artifactId>
+			<version>${wstro-base.version}</version>
+		</dependency>
+
+		<!-- 图片缩略图 -->
+		<dependency>
+			<groupId>net.coobird</groupId>
+			<artifactId>thumbnailator</artifactId>
+			<version>0.4.8</version>
+		</dependency>
+		<!-- 验证码生成器 -->
+		<dependency>
+			<groupId>com.github.axet</groupId>
+			<artifactId>kaptcha</artifactId>
+			<version>${kaptcha.version}</version>
+		</dependency>
+	</dependencies>
+
+	<!-- 编译版本 -->
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${maven-compiler.source}</source>
+					<target>${maven-compiler.target}</target>
+					<encoding>${maven.compiler.encoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>wstro-controller</finalName>
+	</build>
+	
+</project>

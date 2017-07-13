@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: wstro-web
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: wstro-web
+Build-Jdk: 1.8.0_65
+Implementation-URL: http://projects.spring.io/spring-boot/wstro-parent
+ /wstro-web/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>wstro-parent</groupId>
+		<artifactId>wstro-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>wstro-core</groupId>
+	<artifactId>wstro-core</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>wstro-config</module>
+		<module>wstro-entity</module>
+		<module>wstro-shiro</module>
+		<module>wstro-service</module>
+		<module>wstro-task</module>
+		<module>wstro-controller</module>
+	</modules>
+	
+	
+	<!-- 编译版本 -->
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${maven-compiler.source}</source>
+					<target>${maven-compiler.target}</target>
+					<encoding>${maven.compiler.encoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>wstro-core</finalName>
+	</build>
+
+</project>

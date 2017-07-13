@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>wstro-parent</groupId>
+		<artifactId>wstro-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>wstro-web</groupId>
+	<artifactId>wstro-web</artifactId>
+	<name>wstro-web</name>
+	<packaging>war</packaging>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>wstro-controller</groupId>
+			<artifactId>wstro-controller</artifactId>
+			<version>${wstro-base.version}</version>
+		</dependency>
+	</dependencies>
+
+	<!-- 编译版本 -->
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${maven-compiler.source}</source>
+					<target>${maven-compiler.target}</target>
+					<encoding>${maven.compiler.encoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<!-- Tomcat启动 直接访问http://localhost:8080/ -->
+					<url>http://localhost:8080/manager/wstro</url>
+					<server>tomcat</server>
+					<username>joey</username>
+					<password>jay</password>
+					<path>/</path>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<!-- maven打包的时候告诉maven不需要web.xml,否刚会报找不到web.xml错误 -->
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>wstro</finalName>
+	</build>
+</project>
